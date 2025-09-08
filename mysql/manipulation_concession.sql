@@ -1,0 +1,24 @@
+select * from CONCESSIONNAIRE c;
+
+select fv.ID_MODELE, fv.NOMBRE_DE_VENTE from FAIT_VENTE fv;
+
+update CONCESSIONNAIRE c set NOM='CROIX-ROUSSE';
+
+update FAIT_VENTE fv set
+                                NOMBRE_DE_VENTE=2500,
+                                ID_TEMPS=(select fv.ID_TEMPS from TEMPS t where t.ANNEE="2001")
+where fv.ID_CONCESSIONNAIRE = (select c.ID_CONCESSIONNAIRE from CONCESSIONNAIRE c where c.NOM='Bron') and
+    fv.ID_MODELE = (select m.ID_MODELE from MODEL m where m.DESIGNATION ='Espace') and
+    fv.ID_TEMPS = (select t.ID_TEMPS from TEMPS t where t.ANNEE=2002);
+
+SELECT
+    c.NOM,
+    m.DESIGNATION as 'Modèle',
+    t.ANNEE AS 'Année',
+    SUM(fv.NOMBRE_DE_VENTE) AS 'nombre de ventes',
+    COUNT(*) AS nb_lignes
+FROM FAIT_VENTE fv
+         JOIN CONCESSIONNAIRE c ON c.ID_CONCESSIONNAIRE = fv.ID_CONCESSIONNAIRE
+         JOIN MODEL m ON m.ID_MODELE = fv.ID_MODELE
+         JOIN TEMPS t ON t.ID_TEMPS = fv.ID_TEMPS
+GROUP BY c.NOM, m.DESIGNATION, t.ANNEE, fv.NOMBRE_DE_VENTE;
