@@ -120,3 +120,26 @@ FROM FAIT_VENTE fv
 GROUP BY t.ANNEE
 ORDER BY total_ventes DESC
 LIMIT 1;
+
+-- Partie trigger;
+
+# exo 1
+create trigger insert_modele_audit
+    BEFORE INSERT ON MODEL
+    FOR EACH ROW
+    INSERT INTO AUDIT_TABLE (LOG_DATE, ACTION, TABLE_NAME, MODELE_ID)
+    values (NOW(), 'INSERT', 'MODEL', NEW.ID_MODELE);
+
+create trigger insert_fait_vente_audit
+    BEFORE INSERT ON FAIT_VENTE
+    FOR EACH ROW
+    INSERT INTO AUDIT_TABLE (LOG_DATE, ACTION, TABLE_NAME, MODELE_ID, TEMPS_ID, CON_ID)
+    values (NOW(), 'INSERT', 'FAIT_VENTE', NEW.ID_MODELE, NEW.ID_TEMPS, NEW.ID_CONCESSIONNAIRE);
+
+INSERT INTO `MODEL` (`DESIGNATION`) VALUES
+    ('Test Insert');
+
+INSERT INTO `FAIT_VENTE` (`ID_CONCESSIONNAIRE`, `ID_MODELE`, `ID_TEMPS`, `NOMBRE_DE_VENTE`) VALUES(
+                                                                                                      (select ID_CONCESSIONNAIRE FROM  CONCESSIONNAIRE WHERE NOM='Bron'),
+                                                                                                      (select ID_MODELE FROM  MODEL WHERE DESIGNATION='Test Insert'),
+                                                                                                      (select ID_TEMPS FROM  TEMPS WHERE ANNEE=2001), 55500);
