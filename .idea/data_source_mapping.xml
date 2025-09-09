@@ -5,8 +5,13 @@
     <file url="file://$PROJECT_DIR$/mysql/concession/insert_concession.sql" value="176c7fbc-541a-4cfa-bd12-5f2ad8281041" />
     <file url="file://$PROJECT_DIR$/mysql/concession/manipulation_concession.sql" value="176c7fbc-541a-4cfa-bd12-5f2ad8281041" />
     <file url="file://$PROJECT_DIR$/mysql/entreprise/mysql-create-table.sql" value="176c7fbc-541a-4cfa-bd12-5f2ad8281041" />
+    <file url="file://$PROJECT_DIR$/mysql/sakila/manipulation.sql" value="176c7fbc-541a-4cfa-bd12-5f2ad8281041" />
+    <file url="file://$PROJECT_DIR$/mysql/sakila/schema.sql" value="176c7fbc-541a-4cfa-bd12-5f2ad8281041" />
     <file url="file://$PROJECT_DIR$/mysql/villes_fr/create-view.sql" value="176c7fbc-541a-4cfa-bd12-5f2ad8281041" />
     <file url="file://$PROJECT_DIR$/mysql/villes_fr/lock-tables-mysql.sql" value="176c7fbc-541a-4cfa-bd12-5f2ad8281041" />
     <file url="file://$PROJECT_DIR$/mysql/villes_fr/manipulation.sql" value="176c7fbc-541a-4cfa-bd12-5f2ad8281041" />
+    <file url="file://$PROJECT_DIR$/postgre/jsontest.sql" value="c0560f7b-0c31-4bd8-8c15-9549b8dc4319" />
+    <file url="file://$PROJECT_DIR$/postgre/sakila/init.sql" value="c0560f7b-0c31-4bd8-8c15-9549b8dc4319" />
+    <file url="file://$PROJECT_DIR$/postgre/sakila/insert.sql" value="c0560f7b-0c31-4bd8-8c15-9549b8dc4319" />
   </component>
 </project>
