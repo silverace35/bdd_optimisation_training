@@ -6,6 +6,9 @@
     <file url="file://$PROJECT_DIR$/mysql/concession/insert_concession.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/mysql/concession/manipulation_concession.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/mysql/entreprise/mysql-create-table.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/mysql/epargne/creation_bdd.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/mysql/epargne/inserts.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/mysql/epargne/manipulations.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/mysql/sakila/manipulation.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/mysql/sakila/schema.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/mysql/villes_fr/create-view.sql" dialect="MySQL" />
